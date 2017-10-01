@@ -5,10 +5,12 @@
 </head>
 <body>
 {% for dict_item in info %}
-   {% for key, value in dict_item.items() %}
+
+   {% for key, value in dict_item.items %}
       <h1>Key: {{key}}</h1>
       <h2>Value: {{value}}</h2>
    {% endfor %}
+
 {% endfor %}
 </body>
 </html>
