@@ -7,5 +7,4 @@ def index(request):
 		data = json.load(data_file)
 	info = [] 
 	info = data
-
 	return render(request,'top/index.html', {'info' : info})
