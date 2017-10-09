@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from django.utils.encoding import smart_str
 import time
 import json
 
@@ -44,6 +45,6 @@ for top in top10:
 	list_data.append(data)
 	#json_str = json.dumps(data)
 	k = k + 1
-	file.write(ch)
+	file.write(smart_str(ch))
 with open('data.json', 'a') as f:
 		json.dump(list_data, f)
