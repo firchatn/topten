@@ -17,10 +17,8 @@ f = open('data.json', 'r+')
 f.truncate()
 top10 = browser.find_elements(By.XPATH, "//a[contains(@class, 'yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink      spf-link ')]")
 top10info = browser.find_elements(By.XPATH, "//ul[contains(@class, 'yt-lockup-meta-info')]")
-topimg = browser.find_elements(By.XPATH, "//img") 
 
-print(browser.page_source)
-
+#print(browser.page_source) for testing
 
 time.sleep(10)
 file = open('youtube.txt','w') 
@@ -41,12 +39,12 @@ for top in top10:
 		ch = ch + "\n" + texte[l]
 		print(texte[l])
 		l = l + 1
-	info2 = top.get_attribute("href")
+	href = top.get_attribute("href")
 
-	urlimg =  'https://img.youtube.com/vi/'+ info2[info2.index('=')+1:] +'/hqdefault.jpg'
+	urlimg =  'https://img.youtube.com/vi/'+ href[href.index('=')+1:] +'/hqdefault.jpg'
 
 	print(urlimg)
-	data = { 'title' : t , 'date' : texte[0] , 'vue' : texte[1] , 'img' : urlimg , 'href' : info2 } 
+	data = { 'title' : t , 'date' : texte[0] , 'vue' : texte[1] , 'img' : urlimg , 'href' : href } 
 	list_data.append(data)
 	#json_str = json.dumps(data)
 	k = k + 1
