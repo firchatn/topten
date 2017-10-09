@@ -10,12 +10,13 @@
 <body>
 
     <div class="container">
+    <h1>Top 50 Youtube Video</h1>
 		<div class="row">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 				<ul class="event-list">
 
 
-{% for dict_item in info %}
+					{% for dict_item in info %}
 
 					<li>
 						<img alt="Independence Day" src="{% static 'top/img/img2.png' %}" />
@@ -37,7 +38,8 @@
 							</ul>
 						</div>
 					</li>
-{% endfor %}
+					
+					{% endfor %}
 
 				</ul>
 			</div>
