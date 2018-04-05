@@ -6,7 +6,7 @@ import time
 import json
 
 
-browser = webdriver.PhantomJS("/home/firas/git/scripts-python/phantomjs-2.1.1-linux-x86_64/bin/phantomjs",  service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any'])
+browser = webdriver.PhantomJS("phantomjs-2.1.1-linux-x86_64/bin/phantomjs",  service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any'])
 browser.set_window_size(1120, 550)
 
 print(browser.current_url)
